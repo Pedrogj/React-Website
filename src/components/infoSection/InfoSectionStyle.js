@@ -5,7 +5,7 @@ export const InfoContainer = styled.div`
   background-color: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
 
   @media (max-width: 768px) {
-    padding: 100px;
+    padding: 100px 0;
   }
 `;
 
@@ -24,13 +24,14 @@ export const InfoWrapper = styled.div`
 export const InfoRow = styled.div`
   display: grid;
   grid-template-columns: minmax(auto, 1fr);
+  width: 100%;
   align-items: center;
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `"col2 col1"` : `"col1 col2"`};
 
   @media (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `"col1" "col2"` : `"col1 col2" "col2 col2"`};
+      imgStart ? `"col1" "col2"` : `"col1 col1" "col2 col2"`};
   }
 `;
 
