@@ -25,10 +25,11 @@ export const FooterLinksContainer = styled.div`
 `;
 
 export const FooterLinksWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
   @media (max-width: 820px) {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -41,6 +42,10 @@ export const FooterLinksItems = styled.div`
   width: 160px;
   box-sizing: border-box;
   color: #fff;
+
+  @media (max-width: 820px) {
+    align-items: center;
+  }
 
   @media (max-width: 420px) {
     margin: 0;
